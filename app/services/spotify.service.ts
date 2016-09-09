@@ -20,7 +20,7 @@ export class SpotifyService {
     }
 
     getArtist(id:string) {
-        this.searchUrl = 'https://api.spotify.com/v1/artists/' + id;
+        this.artistUrl = 'https://api.spotify.com/v1/artists/' + id;
         return this._http.get(this.artistUrl)
             .map(res => res.json());
     }
